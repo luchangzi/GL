@@ -3,30 +3,24 @@
 
 #include "my_header.h"
 #include <stdio.h>
-long int calcul_du_min (long int entier1, long int entier2);
+#include <math.h>
+
+#define ECART 1e-10
+
+
 int main(void)
 {
-	long int min;
-	long int a;
-	long int b;
-	printf("premier nombre=");
-	scanf("%d", &a);
-	printf("deuxieme nombre=");
-	scanf("%d", &b);
-	min=calcul_du_min(a,b);
-	printf("min=%d",min);
-	return 0;
-}
-long int calcul_du_min(long int entier1, long int entier2)
-{
-	long int f;
-	if(entier2 > entier1)
-	{
-		f=entier1;
-	}
-	else
-	{
-		f=entier2;
-	}
-	return f;
+    double a = 2.0, b = 3.0, c = 4.0, delta;
+    unsigned char nb_solutions;
+
+    delta = b*b - 4*a*c;
+
+    if( fabs(delta) < ECART )
+        nb_solutions = 1;
+    else if (delta > 0.0)
+        nb_solutions = 2;
+    else
+        nb_solutions = 0;
+
+        return 0;
 }

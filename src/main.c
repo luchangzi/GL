@@ -8,7 +8,7 @@ int main(void)
 {
     int s1=0 , n1=3 , n2=3 , s3=0 , b=0 , c=1, s4=0, a=1 , b1=1;
 	long unsigned int s2=0;
-	while(n1>0)
+	while(n1<36)
 	{
 		s1 = s1+n1;
 		n1 = n1+3;
@@ -24,14 +24,13 @@ int main(void)
 		s3= s3+b;
 		c++;
 	}
-	while(a<=100&&b1<=20)
+	while(b1<=20)
 	{
 		if(a%3==0 || a%7==0)
 		{
 			s4= s4+a;
 			b1++;
 		}
-		a++;
 	}
 	return 0;
 }

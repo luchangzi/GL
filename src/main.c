@@ -31,6 +31,7 @@ int main(void)
 			s4= s4+a;
 			b1++;
 		}
+		a++;
 	}
 	return 0;
 }

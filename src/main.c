@@ -31,7 +31,7 @@ int main(void)
 		{
 			sat[i2]=SEUILH;
 		}
-		else
+		else if(sat[i2]<SEUILB)
 		{
 			sat[i2]=SEUILB;
 		}

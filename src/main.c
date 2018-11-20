@@ -43,7 +43,7 @@ int main(void)
 			x=i3-1;
 			while(x>=0)
 			{
-				dist[i3]=dist[i3]-dist[i3-x];
+				dist[i3]=dist[i3]-dist[x];
 				x=x-1;
 			}
 		}

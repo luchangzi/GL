@@ -60,6 +60,7 @@ int main(void)
 	{
 		miroir[i5+3]=miroir[2-i5];
 	}
+	return 0;
 			
 }
 

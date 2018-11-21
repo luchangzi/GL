@@ -7,7 +7,7 @@
 int main(void)
 {
 	unsigned char bin[10]={12,10,20,15,14,30,31,21,17,25};
-	unsigned char i,seuil=16,i2,i3,x,i4,i5;
+	unsigned char i,seuil=16,i2,i3,i4,i5;
     int sat[10]={rand()%400-150,rand()%400-150,rand()%400-150,rand()%400-150,rand()%400-150,rand()%400-150,rand()%400-150,rand()%400-150,rand()%400-150,rand()%400-150};
 	int SEUILH=200,SEUILB=-100;
 	int dist[10]={0,12,20,30,32,34,35,40,46,50};
@@ -36,21 +36,9 @@ int main(void)
 			sat[i2]=SEUILB;
 		}
 	}
-	for(i3=0;i3<10;i3++)
+	for(i3=9;i3>0;i3--)
 	{
-		if(i3>0)
-		{
-			x=i3-1;
-			while(x>=0)
-			{
-				dist[i3]=dist[i3]-dist[x];
-				x=x-1;
-			}
-		}
-		else
-		{
-			dist[i3]=dist[i3];
-		}
+		dist[i3]=dist[i3]-dist[i3-1];
 	}
 	for(i4=0;i4<5;i4++)
 	{

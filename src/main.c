@@ -7,27 +7,19 @@
 
 int main(void)
 {
-    unsigned char i,i2,pareil=0,a,b,c,d;
+    unsigned char i,i2,pareil,a,b,c,d,e,meilleur;
 	short score[100];
 	short gagnante[6];
-	short jouer[6];
+	short jouer[6]={12,23,45,20,1,5};
 	
 	for(c=0;c<100;c++)
 	{
-	initialiserTirage(); 
+		pareil=0;
+		initialiserTirage(); 
 	for(a=0;a<6;a++)
 	{
 		gagnante[a]=tirerNumero();
 	}
-		
-	initialiserTirage();
-
-	for(b=0;b<6;b++)
-	{
-		jouer[b]=tirerNumero();
-	}
-	
-
 	for(i=0;i<6;i++)
 	{
 		for(i2=0;i2<6;i2++)
@@ -40,9 +32,20 @@ int main(void)
 	}
 	score[c]=pareil;
 	}
+	meilleur = score[0]; 
+	for(e=1;e<100;e++)
+	 {
+		if(meilleur>=score[e])
+		{
+			meilleur=meilleur;
+		}
+		else
+		{
+			meilleur=score[e];
+		}
+	 }
 	
-	
-	printf("%d",pareil);
+	printf("%d",meilleur);
 	
 	return 0;
 }

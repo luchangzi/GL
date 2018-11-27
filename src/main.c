@@ -7,10 +7,13 @@
 
 int main(void)
 {
-    unsigned char i,i2,pareil=0,a,b;
+    unsigned char i,i2,pareil=0,a,b,c,d;
+	short score[100];
 	short gagnante[6];
 	short jouer[6];
 	
+	for(c=0;c<100;c++)
+	{
 	initialiserTirage(); 
 	for(a=0;a<6;a++)
 	{
@@ -35,6 +38,10 @@ int main(void)
 			}
 		}
 	}
+	score[c]=pareil;
+	}
+	
+	
 	printf("%d",pareil);
 	
 	return 0;

@@ -6,7 +6,7 @@
 #include <userint.h>
 int main(void)
 {
-	int i;
+	int i,a,b,c,d;
 	char ligne1A[80]= "Nom: triangle_A";
 	char ligne2A[80]= "Nb points: 3";
 	char ligne3A[80]= "Cordonnees: 10 20 30 20 30 40 -1 -1 -1 -1";
@@ -27,7 +27,7 @@ int main(void)
 		if(x1[i]==-1)
 		{
 			sprintf(erreur,"x1[%d]",i);
-			MessagePopup(erreur,erreur2);
+			a=MessagePopup(erreur,erreur2);
 		}
 	}
 	for(i=0;i<5;i++)
@@ -35,13 +35,13 @@ int main(void)
 		if(y1[i]==-1)
 		{
 			sprintf(erreur,"y1[%d]",i);
-			MessagePopup(erreur,erreur2);
+			b=MessagePopup(erreur,erreur2);
 		}
 	}
 	sprintf(affiche,"la figure %s possede %d sommets",nom_figA,nb_ptsA);
-	MessagePopup(A,affiche);
+	c=MessagePopup(A,affiche);
 	sprintf(affiche2,"la figure %s possede %d sommets",nom_figB,nb_ptsB);
-	MessagePopup(B,affiche2);
+	d=MessagePopup(B,affiche2);
 	
 	return 0;
 	
